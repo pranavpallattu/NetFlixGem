@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import lang from "../utils/languageConstants";
 import { useDispatch, useSelector } from "react-redux";
-import { API_Options, GEMINI_API_KEY } from "../utils/constants";
+import { API_Options} from "../utils/constants";
 import { addGPTMovieResult } from "../utils/gptSlice";
 
 const GptSearchBar = () => {
@@ -35,7 +35,7 @@ const GptSearchBar = () => {
 
     // Example: Inside a component or useEffect
     const result = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" +
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
         import.meta.env.VITE_GEMINI_API_KEY,
       {
         method: "POST",
